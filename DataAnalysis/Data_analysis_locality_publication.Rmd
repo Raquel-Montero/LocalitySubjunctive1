@@ -1,0 +1,154 @@
+---
+title: "Experiment: Subjunctive Locality"
+author: "Raquel Montero Estebaranz"
+date: "10.15.2022"
+output: 
+  html_document: 
+      toc: true
+      toc_float: true
+      theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align="center")
+```
+```{css, echo=FALSE}
+h1,h4 {
+  text-align: center;
+}
+p {
+  text-align: justify; 
+}
+```
+
+## Introduction
+This file shows the code used in R to analyse the data of the experiment "Locality". An experiment run using the PennController for Ibex Platform. You can find a demo of the experiment here: https://farm.pcibex.net/r/zjmigv/. The experimental items as well as the code of the experiment can also be found on my GitHub. 
+
+If you have any questions/comments or if you spot any errors in the code let me know!
+
+## Analysis
+First, we need to load the packages that will be used: 
+```{r}
+library(readr)                                     # Importing csv files
+library(carData)                                    # for cat package
+library(car)                                        # Anova function
+library(plyr)                                       # ddply function
+library(dplyr, warn.conflicts = FALSE)              # Operations
+library(ggplot2)                                    # to use ggplot
+suppressPackageStartupMessages(library(sjPlot))     # to change the font
+library(Matrix)                                     # for lme4 package
+library(lme4)                                       # to calculate lmer models
+library(lmerTest, warn.conflicts = FALSE)           # for the p values
+library(effsize)                                    # effect size
+```
+The first thing to do is to is to import and prepare the the data for visualization (e.g. eliminating the columns that are not need, converting to numeric the scores, etc.):
+```{r}
+#Importing the data of the CRITICAL ITEMS:
+datacritical <- read_csv("C:/Users/winadmin/Documents/PhD/Part2/Experiment/Experiment1_Locality/Results/Publication_final/results-clean2publish.csv", show_col_types = FALSE)
+
+#Eliminating variables not used: 
+ex.datacritical <- subset(datacritical, Part == "Choice" & Experiment =="Experiment")
+
+#change into a factor: 
+ex.datacritical$Score <- as.numeric(as.character(ex.datacritical$Score))
+
+#Importing the data of the CONTROLS:
+datacontrol <- read_csv("C:/Users/winadmin/Documents/PhD/Part2/Experiment/Experiment1_Locality/Results/Publication_final/results-clean2publish.csv", show_col_types = FALSE)
+
+#Eliminating variables not used: 
+ex.datacontrol <- subset(datacontrol, Part == "Choice" & Experiment =="Fillers" & Verb !="conseguir" & Verb !="desear")
+
+#change into numeric: 
+ex.datacontrol$Score <- as.numeric(as.character(ex.datacontrol$Score))
+
+```
+## Data Visualisation
+First we want to calculate the measures of standard deviation. Given that it is a Likert scale the most appropriate measure will be the median:
+```{r}
+plot.datacritical2 <- ddply(ex.datacritical, .(Factive,Mood,Experiment),summarize, n=n(),
+                           median = median(as.numeric(as.character(Score))))
+plot.datacritical2
+
+plot.datacontrol2 <- ddply(ex.datacontrol, .(Factive,Mood,Experiment),summarize, n=n(),
+                          median = median(as.numeric(as.character(Score))))
+
+plot.datacontrol2
+
+# Combining the two data sets:
+total2 <- rbind(plot.datacritical2, plot.datacontrol2)
+total2
+# Renaming the items:
+total2$Experiment <- ifelse(total2$Experiment=="Experiment", "Critical Items","Controls")
+total2
+```
+and then we plot the results: 
+```{r}
+#Font for the graph:
+windowsFonts("Garamond" = windowsFont("Garamond"))
+
+set_theme( base = theme_bw(base_family = 'Garamond'),
+  title.size = 1.6,
+  axis.title.size = 1.4,
+  axis.textsize = 1.1,
+  legend.size = 1,
+  legend.title.size = 1,
+  geom.label.size = 3
+)
+# Plotting the graph:
+factivity2 <- ggplot(total2) + 
+  geom_bar( aes(y=median, x=Factive,fill=Mood),stat="identity", position = "dodge") + 
+  facet_wrap(~Experiment) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  labs(title="Acceptability Rating: Median", x="Type of Verb", y="Median Score")
+factivity2
+```
+## Statitical Analysis 
+
+```{r}
+#Logistic Regression Model:
+lmer.all <- lmer(Score ~ Mood*Factive + (1|IP) + (1|Itemnu),data=ex.datacritical)
+summary(lmer.all)
+car::Anova(lmer.all, type = "III")
+
+```
+The results indicate that there are two main effects: mood and factivity, and an interaction between the two. In order to see the effect of mood in each independent class and given that all values have two levels each, we subdivide the data and calculate the model again: 
+```{r}
+ex.datacriticalfactive <-subset(ex.datacritical, Factive=="factive")
+ex.datacriticalnotfactive <- subset(ex.datacritical, Factive=="non-factive")
+
+#For factive verbs: p < 2.2e-16 ***
+lmer.allfactive <- lmer(Score ~ Mood + (1|IP) + (1|Itemnu),data=ex.datacriticalfactive)
+car::Anova(lmer.allfactive, type = "III")
+
+#For non-factive verbs: 2.549e-06 *** 
+lmer.allnotfactive <- lmer(Score ~ Mood + (1|IP) + (1|Itemnu),data=ex.datacriticalnotfactive)
+car::Anova(lmer.allnotfactive, type = "III")
+```
+The results is that Mood has a significant effect for both factives and non-factive verbs. What we need to know next is what is the effect size:
+
+```{r}
+#Calculating the effect size:
+
+#For Not factive verbs the effect is small: d estimate: 0.24463 (small)
+cohen.d(Score ~ Mood, data = ex.datacriticalnotfactive)
+# For factive verbs the effect is big: d estimate: 0.7186745 (medium)
+cohen.d(Score ~ Mood, data = ex.datacriticalfactive)
+
+```
+
+```{r}
+# For The Controls the effect of Mood is: 
+ex.datacontrolfactive <-subset(ex.datacontrol, Factive=="factive")
+ex.datacontrolnotfactive <- subset(ex.datacontrol, Factive=="non-factive")
+#Factive: d estimate: 4.556767 (large)
+cohen.d(Score ~ Mood, data = ex.datacontrolnotfactive)
+# For factive verbs the effect is big: d estimate: d estimate: 2.458955 (large)
+cohen.d(Score ~ Mood, data = ex.datacontrolfactive)
+```
+
+
+
+
+
+
+
