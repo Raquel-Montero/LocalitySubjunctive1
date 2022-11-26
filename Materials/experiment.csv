@@ -1,0 +1,81 @@
+Experiment,ItemName,Mood,Factivity,Verb,Group,Itemno,Audio,Sentences,Words
+Experiment,critical+1+subj,subj,factive,saber,A,1,unoa.mp3,No sabía que creías que fuera verdad.,7
+Experiment,critical+2+ind,ind,factive,saber,A,2,dosa.mp3,No sabían que en la antigüedad se creía que la tierra era plana.,13
+Experiment,critical+3+subj,subj,factive,darse cuenta,A,3,tresa.mp3,Nadie se dio cuenta de que Juan creía que faltara mucho para llegar.,13
+Experiment,critical+4+ind,ind,factive,darse cuenta,A,4,cuatroa.mp3,Nadie se dio cuenta de que creías que quedaba comida en la cocina.,13
+Experiment,critical+5+subj,subj,factive,notar,A,5,cincoa.mp3,No notaron que Juan pensaba que mereciera la pena intentarlo.,10
+Experiment,critical+6+ind,ind,factive,notar,A,6,seisa.mp3,No notó que María pensaba que podía ser cierto.,9
+Experiment,critical+7+subj,subj,factive,descubrir,A,7,sietea.mp3,No descubrió que su familia creía que le fueran a despedir.,11
+Experiment,critical+8+ind,ind,factive,descubrir,A,8,ochoa.mp3,No descubrió que su pareja creía que las relaciones a larga distancia no tenían futuro.,15
+Experiment,critical+9+subj,subj,factive,enterarse,A,9,nuevea.mp3,No se enteraron de que su amiga creía que Laura estuviese embarazada.,12
+Experiment,critical+10+ind,ind,factive,enterarse,A,10,dieza.mp3,No se enteraron de que Juan pensaba que no era cierto.,11
+Experiment,critical+11+subj,subj,non-factive,imaginar,A,11,oncea.mp3,No imaginaba que creías que el equipo fuera a ganar.,10
+Experiment,critical+12+ind,ind,non-factive,imaginar,A,12,docea.mp3,No imaginaban que en la Edad Media se creía que  los dientes perforados otorgaban fuerza.,15
+Experiment,critical+13+subj,subj,non-factive,pensar,A,13,trecea.mp3,Nadie pensaba que María creía que la biblioteca abriera los domingos.,11
+Experiment,critical+14+ind,ind,non-factive,pensar,A,14,catorcea.mp3,Nadie pensaba que todavía creías que Papa Noel traía los regalos.,11
+Experiment,critical+15+subj,subj,non-factive,asumir,A,15,quincea.mp3,No asumían que alguien podía creer que el teorema de Pitágoras fuera falso.,13
+Experiment,critical+16+ind,ind,non-factive,asumir,A,16,dieciseisa.mp3,No asumía que Juan creía que la termodinámica era un engañabobos.,11
+Experiment,critical+17+subj,subj,non-factive,decir,A,17,diecisietea.mp3,El profesor no nos dijo que los romanos creían que la sangre de los gladiadores pudiese curar la epilepsia.,19
+Experiment,critical+18+ind,ind,non-factive,decir,A,18,dieciochoa.mp3,El profesor no nos dijo que los griegos creían que el destino estaba predeterminado.,14
+Experiment,critical+19+subj,subj,non-factive,creer,A,19,diecinuevea.mp3,No creían que pensaba que le conviniera.  ,7
+Experiment,critical+20+ind,ind,non-factive,creer,A,20,veintea.mp3,No creían que Ana pensaba que podía ser posible.,9
+Fillers ,filler+1,ind,factive,conseguir,A,21,veintiunoa.mp3,Consiguió que María aprueba.,4
+Fillers ,filler+2,subj,factive,conseguir,A,22,veintidosa.mp3,Siempre consigue que Juan sonría.,5
+Fillers ,filler+3,ind,factive,reconocer,A,23,veintitresa.mp3,El profesor reconoció que estaba equivocado.,6
+Fillers ,filler+4,subj,factive,reconocer,A,24,veinticuatroa.mp3,Reconocieron que hubieran trabajado poco.,5
+Fillers ,filler+5,subj,non-factive,desear,A,25,venticincoa.mp3,Deseo que vengas a París.,5
+Fillers ,filler+6,ind,non-factive,desear,A,26,veintiseisa.mp3,Deseamos que todo va bien.,5
+Fillers ,filler+7,subj,non-factive,soñar,A,27,veintisietea.mp3,Soñé que Ana trabajara en un supermercado.,7
+Fillers ,filler+8,ind,non-factive,soñar,A,28,veintiochoa.mp3,Soñó que viajaba por todo el mundo.,7
+Pure Fillers ,filler+9+si,subj,,creer,A,29,veintinuevea.mp3,Sí creo que pueda ser posible.,6
+Pure Fillers ,filler+10+si,subj,,creer,A,30,treintaa.mp3,Nosotros sí que creemos que Juan vaya a llegar a tiempo.,11
+Pure Fillers ,filler+11+pasado,subj,,ordenar,A,31,treintaiunoa.mp3,Te ordeno que hicieras los deberes.,6
+Pure Fillers ,filler+12+presente,subj,,ordenar,A,32,treintaidosa.mp3,Te ordeno que ordenes el cuarto.,6
+Pure Fillers ,filler+13+pasado,subj,,querer,A,33,treintaitresa.mp3,Quiero que acabara el trabajo.,5
+Pure Fillers ,filler+14+presente,subj,,querer,A,34,treintaicuatroa.mp3,Quiero que venga mañana.,4
+Pure Fillers ,filler+15+pasado,subj,,prohibir,A,35,treintaicincoa.mp3,Ana me prohíbe que llevara esta ropa a la escuela.,10
+Pure Fillers ,filler+16+presente,subj,,prohibir,A,36,treintaiseisa.mp3,Está prohibido que conduzcas borracho.,5
+Pure Fillers ,filler+17+pasado,subj,,esperar,A,37,treintaisietea.mp3,Espero que fueras muy feliz.,5
+Pure Fillers ,filler+18+presente,subj,,esperar,A,38,treintaiochoa.mp3,Espero que cantes en el festival.,6
+Pure Fillers ,filler+19+pasado,subj,,necesito,A,39,treintainuevea.mp3,Necesito que me hicieras caso.,5
+Pure Fillers ,filler+20+presente,subj,,necesito,A,40,cuarentaa.mp3,Necesito que completen el formulario.,5
+Experiment,critical+1+ind,ind,factive,saber,B,1,unob.mp3,No sabía que creías que era verdad.,7
+Experiment,critical+2+subj,subj,factive,saber,B,2,dosb.mp3,No sabían que en la antigüedad se creía que la tierra fuera plana.,13
+Experiment,critical+3+ind,ind,factive,darse cuenta,B,3,tresb.mp3,Nadie se dio cuenta de que Juan creía que faltaba mucho para llegar.,13
+Experiment,critical+4+subj,subj,factive,darse cuenta,B,4,cuatrob.mp3,Nadie se dio cuenta de que creías que quedara comida en la cocina.,13
+Experiment,critical+5+ind,ind,factive,notar,B,5,cincob.mp3,No notaron que Juan pensaba que merecía la pena intentarlo.,10
+Experiment,critical+6+subj,subj,factive,notar,B,6,seisb.mp3,No notó que María pensaba que pudiera ser cierto.,9
+Experiment,critical+7+ind,ind,factive,descubrir,B,7,sieteb.mp3,No descubrió que su familia creía que le iban a despedir.,11
+Experiment,critical+8+subj,subj,factive,descubrir,B,8,ochob.mp3,No descubrió que su pareja creía que las relaciones a larga distancia no tuvieran futuro.,15
+Experiment,critical+9+ind,ind,factive,enterarse,B,9,nueveb.mp3,No se enteraron de que su amiga creía que Laura estaba embarazada.,12
+Experiment,critical+10+subj,subj,factive,enterarse,B,10,diezb.mp3,No se enteraron de que Juan pensaba que no fuera cierto.,11
+Experiment,critical+11+ind,ind,non-factive,imaginar,B,11,onceb.mp3,No imaginaba que creías que el equipo iba a ganar.,10
+Experiment,critical+12+subj,subj,non-factive,imaginar,B,12,doceb.mp3,No imaginaban que  en la Edad Media se creía que  los dientes perforados otorgaran fuerza.,15
+Experiment,critical+13+ind,ind,non-factive,pensar,B,13,treceb.mp3,Nadie pensaba que María creía que la biblioteca abría los domingos.,11
+Experiment,critical+14+subj,subj,non-factive,pensar,B,14,catorceb.mp3,Nadie pensaba que todavía creías que Papa Noel trajera los regalos.,11
+Experiment,critical+15+ind,ind,non-factive,asumir,B,15,quinceb.mp3,No asumían que alguien  podía creer que el teorema de Pitágoras era falso.,13
+Experiment,critical+16+subj,subj,non-factive,asumir,B,16,dieciseisb.mp3,No asumía que Juan creía que la termodinámica fuera un engañabobos.,11
+Experiment,critical+17+ind,ind,non-factive,decir,B,17,diecisieteb.mp3,El profesor no nos dijo que los romanos creían que la sangre de los gladiadores podía curar la epilepsia.,19
+Experiment,critical+18+subj,subj,non-factive,decir,B,18,dieciochob.mp3,El profesor no nos dijo que los griegos creían que el destino estuviera predeterminado.,14
+Experiment,critical+19+ind,ind,non-factive,creer,B,19,diecinueveb.mp3,No creían que pensaba que le convenía.,7
+Experiment,critical+20+subj,subj,non-factive,creer,B,20,veinteb.mp3,No creían que Ana pensaba que pudiera ser posible.,9
+Fillers ,filler+1,subj,factive,conseguir,B,21,veintiunob.mp3,Consiguió que María apruebe.,4
+Fillers ,filler+2,ind,factive,conseguir,B,22,veintidosb.mp3,Siempre consigue que Juan sonríe.,5
+Fillers ,filler+3,subj,factive,reconocer,B,23,veintitresb.mp3,El profesor reconoció que estuviera equivocado.,6
+Fillers ,filler+4,ind,factive,reconocer,B,24,veinticuatrob.mp3,Reconocieron que habían trabajado poco.,5
+Fillers ,filler+5,ind,non-factive,desear,B,25,venticincob.mp3,Deseo que vienes a París.,5
+Fillers ,filler+6,subj,non-factive,desear,B,26,veintiseisb.mp3,Deseamos que todo vaya bien.,5
+Fillers ,filler+7,ind,non-factive,soñar,B,27,veintisieteb.mp3,Soñé que Ana trabaja en un supermercado.,7
+Fillers ,filler+8,subj,non-factive,soñar,B,28,veintiochob.mp3,Soñó que viajara por todo el mundo.,7
+Pure Fillers ,filler+9+si,subj,,creer,B,29,veintinueveb.mp3,Ellos sí creen que sea cierto.,7
+Pure Fillers ,filler+10+si,subj,,creer,B,30,treintab.mp3,Sí que creo que quede comida en la nevera.,9
+Pure Fillers ,filler+11+presente,subj,,ordenar,B,31,treintaiunob.mp3,Te ordeno que hagas los deberes.,6
+Pure Fillers ,filler+12+pasado,subj,,ordenar,B,32,treintaidosb.mp3,Te ordeno que ordenaras el cuarto.,6
+Pure Fillers ,filler+13+presente,subj,,querer,B,33,treintaitresb.mp3,Quiero que acabe el trabajo.,5
+Pure Fillers ,filler+14+pasado,subj,,querer,B,34,treintaicuatrob.mp3,Quiero que viniera mañana.,4
+Pure Fillers ,filler+15+presente,subj,,prohibir,B,35,treintaicincob.mp3,Ana me prohíbe que lleve esta ropa a la escuela.,10
+Pure Fillers ,filler+16+pasado,subj,,prohibir,B,36,treintaiseisb.mp3,Está prohibido que condujeras borracho.,5
+Pure Fillers ,filler+17+presente,subj,,esperar,B,37,treintaisieteb.mp3,Espero que seas muy feliz.,5
+Pure Fillers ,filler+18+pasado,subj,,esperar,B,38,treintaiochob.mp3,Espero que cantaras en el festival.,6
+Pure Fillers ,filler+19+presente,subj,,necesito,B,39,treintainueveb.mp3,Necesito que me hagas caso.,5
+Pure Fillers ,filler+20+pasado,subj,,necesito,B,40,cuarentab.mp3,Necesito que completaran el formulario.,5
